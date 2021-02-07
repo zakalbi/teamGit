@@ -16,6 +16,7 @@ function App() {
       <h1>Tara</h1>
       <h1>Tara 2</h1>
       <h1> Thomas</h1>
+      <h1>Zak</h1>
     </div>
   );
 }
