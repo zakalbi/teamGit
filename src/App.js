@@ -13,6 +13,7 @@ function App() {
       {/* Navbar is our imported component*/}
       <Navbar />
       <h1>Develop</h1>
+      <h1>Tara</h1>
     </div>
   );
 }
