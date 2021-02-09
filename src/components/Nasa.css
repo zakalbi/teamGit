@@ -1,6 +1,16 @@
+
 .nasa-image {
     width: 600px;
     height: 600px;
     margin: 50px auto;
+}
+
+
+
+.nasa-image {
+    height: 500px;
+    width: 500px;
+    object-fit: contain;
+    image-rendering: optimizeQuality;
 }
 
