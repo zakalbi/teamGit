@@ -1,5 +1,9 @@
 
 import { useState, useEffect } from "react";
+import './Nasa.css'
+
+
+import { useState, useEffect } from "react";
 const Nasa = ({ lat, long }) => {
     const latInt = Math.trunc(lat);
     const lonInt = Math.trunc(long)
@@ -175,6 +179,7 @@ import { useState, useEffect } from "react";
 import './Nasa.css';
 
 
+
 const Nasa = ({lat, long}) => {
     const latInt = Math.trunc(lat);
     const lonInt = Math.trunc(long);
@@ -182,13 +187,22 @@ const Nasa = ({lat, long}) => {
     const [imgUrl, setImgUrl] = useState('');
 
     const pleaseWork = async() => {
+=======
+
+    const pleaseWork = async() => {
       
+
         const response = await fetch(url)
         const picture = await response.json()
         setImgUrl(picture.url)
     }
     useEffect(() => {
         console.log(lat);
+
+        pleaseWork()
+    }, [lat, long, url]);
+    console.log(imgUrl);
+
 
         pleaseWork()
 
@@ -201,15 +215,24 @@ const Nasa = ({lat, long}) => {
     console.log(imgUrl);
 
 
+
     return (
         <div>
             <h1>NASA</h1>
             {imgUrl}
 
+=======
+
+
             <div>
                 <img src={imgUrl} className='nasa-image' />
             </div>
         </div>
+
+    );   
+};
+export default Nasa;
+
     );
 };
 export default Nasa;
@@ -317,4 +340,5 @@ export default Nasa;
 // }
 
 // export default Nasa;
+
 

@@ -4,6 +4,12 @@ import './App.css';
 import Nasa from './components/Nasa';
 import Navbar from './components/Navbar';
 function App() {
+  const [location, setLocation] = useState ({latitude: 0, longitude: 0})
+
+
+import Nasa from './components/Nasa';
+import Navbar from './components/Navbar';
+function App() {
   const [location, setLocation] = useState({ latitude: 0, longitude: 0 })
 
 import Nasa from './components/Nasa';
@@ -11,6 +17,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [location, setLocation] = useState ({latitude: 0, longitude: 0})
+
 
 
   useEffect(() => {
@@ -25,6 +32,11 @@ function App() {
     })
   }, [])
 
+  return(
+    <div className="App">
+      <Navbar />
+
+
   return (
     <div className="App">
       <Navbar />
@@ -35,12 +47,16 @@ function App() {
       TEAM 'LOST IN SPACE'
       <br/>
 
+
       {location.latitude}
       {location.longitude}
       <Nasa long={location.longitude} lat={location.latitude} />
     </div>
   );
 }
+
+export default App;
+
 
 export default App;
 
@@ -73,5 +89,6 @@ export default App;
 //     </div>
 //   )
 // }
+
 
 
